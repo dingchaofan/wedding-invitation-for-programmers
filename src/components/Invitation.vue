@@ -5,7 +5,14 @@
         <div class="cover-content" :class="{'invitation-up':isOpening}">
           <div class="content-inside">
             <img class="content-inside-photo" src="../images/photo.jpg">
-            <p>我们结婚啦！</p>
+            <div class="content-inside-scroll">
+              <p><b>老婆，结婚一周年快乐。</b></p>
+              <p>晃晃悠悠，我们也以新的身份相处一年了，跟正式结婚前仿佛没什么差别，我时常还会冒出“女朋友”的字眼，也时常会忘记已经结婚这件事，但每次想起还是会嘴角微微上扬。</p>
+              <p>结婚是一件很有仪式感的事情，每次想到还是会很让人动容和印象深刻，也许这也是仪式感的意义吧。</p>
+              <p>但日常的我确实无趣且仪式感缺失，我觉得这样不好，平淡的日子里也需要一些精心或笨拙的仪式感的点缀，让记忆更深刻，也让脑子更好使。生活也要好好动脑子，也要更加认真。</p>
+              <p>爱你，不管是婚前还是婚后，和你一起的日子，依旧幸福，我也能感受到我们正在变得更好。这一年，你冒出了很多新的鬼点子，我很开心，也希望我们有更多的鬼点子，认认真真生活，认认真真爱彼此。</p>
+              <p>希望你看到这里，也是嘴角微微上扬的。爱你～</p>
+            </div>
             <!-- <p><b>Jun & undefined</b></p>
             <p>时间：invalid date value</p>
             <p>地点：<b>location can not be found</b></p>
@@ -136,12 +143,26 @@ export default {
             color: #a9895d;
             background-color: #FFF1DE;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             overflow: auto;
             .content-inside-photo{
               width: 100%;
               margin-bottom: 10px;
               padding: 5px;
               border: 1px solid #f7debb;
+            }
+            .content-inside-scroll {
+              flex: 1;
+              overflow-y: scroll; /* 启用垂直滚动条 */
+              border: 1px solid #ccc; /* 可选：添加边框以更好地看到滚动区域 */
+              padding: 5px; /* 可选：添加内边距 */
+              p {
+                text-align: left;
+                text-indent: 2em;
+              }
             }
             p{
               margin-top: 0;
@@ -188,9 +209,9 @@ export default {
               }
             }
             .content-close-button {
-              margin-top: auto;
-              width: 60px;
-              height: 60px;
+              margin-top: 10px;
+              width: 50px;
+              height: 50px;
               border-radius: 50%;
               border: 1px solid #f7debb;
               background: #FFF1DE;
