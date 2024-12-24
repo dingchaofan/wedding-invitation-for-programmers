@@ -6,7 +6,7 @@
           <div class="content-inside">
             <img class="content-inside-photo" src="../images/photo.jpg">
             <p>我们结婚啦！</p>
-            <p><b>Jun & undefined</b></p>
+            <!-- <p><b>Jun & undefined</b></p>
             <p>时间：invalid date value</p>
             <p>地点：<b>location can not be found</b></p>
             <div class="content-inside-bless">
@@ -23,7 +23,8 @@
                 <button @click="sendBarrage">发送祝福弹幕</button>
                 <button @click="closeInvitation">关闭</button>
               </div>
-            </div>
+            </div> -->
+            <button class="content-close-button" @click="closeInvitation">关闭</button>
           </div>
         </div>
         <div class="cover-inside-left" :class="{'opening':isOpening}"></div>
@@ -185,6 +186,14 @@ export default {
                   }
                 }
               }
+            }
+            .content-close-button {
+              margin-top: auto;
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+              border: 1px solid #f7debb;
+              background: #FFF1DE;
             }
           }
         }
